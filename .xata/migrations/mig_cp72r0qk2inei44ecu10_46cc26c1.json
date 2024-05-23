@@ -1,0 +1,12 @@
+{
+  "id": "mig_cp72r0qk2inei44ecu10",
+  "parentID": "mig_cp72qp2k2inei44ectvg",
+  "checksum": "1:46cc26c10a51cb0d522da041003dcce37b875a96d54a2826c06b32647d143aec",
+  "operations": [
+    {
+      "addTable": {
+        "table": "student_registration"
+      }
+    }
+  ]
+}

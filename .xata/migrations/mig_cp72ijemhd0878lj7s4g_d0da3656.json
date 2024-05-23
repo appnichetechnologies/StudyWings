@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72ijemhd0878lj7s4g",
+  "parentID": "mig_cp72ie2k2inei44ect80",
+  "checksum": "1:d0da3656f3ed84c63e1e7c9b90dd8e77393e1e02577f845df02a292f5d6b731b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Student_PasswordHash",
+          "type": "text",
+          "notNull": true,
+          "defaultValue": "xxxxxxxx"
+        },
+        "table": "students"
+      }
+    }
+  ]
+}

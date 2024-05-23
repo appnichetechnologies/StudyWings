@@ -1,0 +1,11 @@
+{
+  "id": "mig_cp72i5ak2inei44ect6g",
+  "checksum": "1:df24cc038dc1268d12ad172d260a2560253da79fc4e1e15873f70b38444ccccf",
+  "operations": [
+    {
+      "addTable": {
+        "table": "students"
+      }
+    }
+  ]
+}

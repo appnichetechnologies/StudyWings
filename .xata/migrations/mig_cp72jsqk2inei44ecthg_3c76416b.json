@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72jsqk2inei44ecthg",
+  "parentID": "mig_cp72jiqk2inei44ectgg",
+  "checksum": "1:3c76416be1c1249df3d54d2f70e7ce9b910f53d5bce7339b549d5ab8eb05b3e9",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Country_Description",
+          "type": "text",
+          "notNull": true,
+          "defaultValue": "xxxxxx"
+        },
+        "table": "countries"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72rsqk2inei44ecu40",
+  "parentID": "mig_cp72rmmmhd0878lj7sog",
+  "checksum": "1:dacb878d92cc4e68ed1e5693cc33721a611e59d90ce8cb807391f3074131c3e1",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Student_Address",
+          "type": "text",
+          "notNull": true,
+          "defaultValue": "India"
+        },
+        "table": "student_registration"
+      }
+    }
+  ]
+}

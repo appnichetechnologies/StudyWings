@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72qp2k2inei44ectvg",
+  "parentID": "mig_cp72qhqk2inei44ectug",
+  "checksum": "1:d0d5c9bd8c151b7730c30b983b30d32a39bbaac3bd51168ff2c00ba244902680",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Application_Status",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Pending"
+        },
+        "table": "applications"
+      }
+    }
+  ]
+}

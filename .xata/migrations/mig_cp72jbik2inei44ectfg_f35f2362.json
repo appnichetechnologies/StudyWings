@@ -1,0 +1,12 @@
+{
+  "id": "mig_cp72jbik2inei44ectfg",
+  "parentID": "mig_cp72j2mmhd0878lj7s6g",
+  "checksum": "1:f35f2362851e7c399744aed67098cee63bce0c70f9002401193a79a6e7242b99",
+  "operations": [
+    {
+      "addTable": {
+        "table": "countries"
+      }
+    }
+  ]
+}

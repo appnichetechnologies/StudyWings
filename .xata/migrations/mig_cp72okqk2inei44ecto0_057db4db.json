@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72okqk2inei44ecto0",
+  "parentID": "mig_cp72obak2inei44ectn0",
+  "checksum": "1:057db4db4268568781b018f2d8a6a6b0409e9b16811e854a0399fed0d8020aca",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Course_Fees",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "200000"
+        },
+        "table": "university_courses"
+      }
+    }
+  ]
+}

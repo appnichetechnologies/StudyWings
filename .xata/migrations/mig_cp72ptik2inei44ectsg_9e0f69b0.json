@@ -1,0 +1,12 @@
+{
+  "id": "mig_cp72ptik2inei44ectsg",
+  "parentID": "mig_cp72pgqk2inei44ectr0",
+  "checksum": "1:9e0f69b095b5801e7debc1057fb754b9e87446288b9130dd9e383bcfd09a13ca",
+  "operations": [
+    {
+      "addTable": {
+        "table": "applications"
+      }
+    }
+  ]
+}

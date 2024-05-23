@@ -1,0 +1,19 @@
+{
+  "id": "mig_cp72s7ik2inei44ecu50",
+  "parentID": "mig_cp72rsqk2inei44ecu40",
+  "checksum": "1:664771316d3d86d576471043aeb9ec88a3d7d67a6ed762f37c8787bf7c3642bd",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Student_ProfilePic",
+          "type": "file[]",
+          "file[]": {
+            "defaultPublicAccess": true
+          }
+        },
+        "table": "student_registration"
+      }
+    }
+  ]
+}

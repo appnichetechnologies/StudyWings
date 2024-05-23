@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72maemhd0878lj7seg",
+  "parentID": "mig_cp72kuemhd0878lj7sdg",
+  "checksum": "1:b07f01d9dd178600dd40a165db40c7ea3eb2fb9a126df8948c4a84f750b4188d",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "University_AdmissionProcess",
+          "type": "text",
+          "notNull": true,
+          "defaultValue": "xxxxxx"
+        },
+        "table": "universities"
+      }
+    }
+  ]
+}

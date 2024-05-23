@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72p5umhd0878lj7smg",
+  "parentID": "mig_cp72p0ik2inei44ectq0",
+  "checksum": "1:b8688234e5ee75519b0d69d98944fce45b1a278b58bea366f116182b1532ca1b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Course_EndDate",
+          "type": "datetime",
+          "notNull": true,
+          "defaultValue": "now"
+        },
+        "table": "university_courses"
+      }
+    }
+  ]
+}

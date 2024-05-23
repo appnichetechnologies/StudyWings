@@ -1,0 +1,19 @@
+{
+  "id": "mig_cp72t1ak2inei44ecu8g",
+  "parentID": "mig_cp72st6mhd0878lj7spg",
+  "checksum": "1:a769847a35ebf49341a242794e534eb117374d06efbead6d40fce2e09169e004",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Student_Document",
+          "type": "file[]",
+          "file[]": {
+            "defaultPublicAccess": true
+          }
+        },
+        "table": "student_documents"
+      }
+    }
+  ]
+}

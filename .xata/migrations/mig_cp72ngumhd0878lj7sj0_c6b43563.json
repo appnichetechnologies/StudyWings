@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72ngumhd0878lj7sj0",
+  "parentID": "mig_cp72n3emhd0878lj7si0",
+  "checksum": "1:c6b435634407fb247a184314648e5b96a505b4946419bc7c97ab907337213871",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Course_Name",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Bachelor of Science in IT"
+        },
+        "table": "university_courses"
+      }
+    }
+  ]
+}

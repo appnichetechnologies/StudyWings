@@ -1,0 +1,17 @@
+{
+  "id": "mig_cp72ie2k2inei44ect80",
+  "parentID": "mig_cp72i5ak2inei44ect6g",
+  "checksum": "1:22897f81909307b581d6fce76dfac2ccfbef3971b349989738bc8f98501df303",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Student_Username",
+          "type": "string",
+          "unique": true
+        },
+        "table": "students"
+      }
+    }
+  ]
+}

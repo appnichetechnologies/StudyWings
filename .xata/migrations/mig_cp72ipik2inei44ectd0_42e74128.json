@@ -1,0 +1,17 @@
+{
+  "id": "mig_cp72ipik2inei44ectd0",
+  "parentID": "mig_cp72ijemhd0878lj7s4g",
+  "checksum": "1:42e74128a52a24a3a01b53e64b4718dbff1c49b2d1591015d0b66fc4872a104d",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Student_Phone",
+          "type": "string",
+          "unique": true
+        },
+        "table": "students"
+      }
+    }
+  ]
+}

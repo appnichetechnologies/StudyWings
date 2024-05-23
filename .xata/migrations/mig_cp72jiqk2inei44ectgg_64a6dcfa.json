@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72jiqk2inei44ectgg",
+  "parentID": "mig_cp72jbik2inei44ectfg",
+  "checksum": "1:64a6dcfa57fbd439fdef7376d9d417fd85fd08589a013e829d87eb39351c9aea",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Country",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "India"
+        },
+        "table": "countries"
+      }
+    }
+  ]
+}

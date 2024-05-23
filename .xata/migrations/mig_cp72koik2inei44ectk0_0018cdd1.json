@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72koik2inei44ectk0",
+  "parentID": "mig_cp72kiumhd0878lj7scg",
+  "checksum": "1:0018cdd1212f44e93e7bd2d94046f4bdfe05cd02212042a0d1cd44015f2e686b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "University_Description",
+          "type": "text",
+          "notNull": true,
+          "defaultValue": "xxxxxxx"
+        },
+        "table": "universities"
+      }
+    }
+  ]
+}

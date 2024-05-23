@@ -1,0 +1,12 @@
+{
+  "id": "mig_cp72k2ak2inei44ectj0",
+  "parentID": "mig_cp72jsqk2inei44ecthg",
+  "checksum": "1:92e5b7e2763ff732f719fb4b972ce257c8594740499264575067255ee3caaa44",
+  "operations": [
+    {
+      "addTable": {
+        "table": "universities"
+      }
+    }
+  ]
+}

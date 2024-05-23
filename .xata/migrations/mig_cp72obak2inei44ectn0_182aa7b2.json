@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72obak2inei44ectn0",
+  "parentID": "mig_cp72o42k2inei44ectm0",
+  "checksum": "1:182aa7b24156a0888c81599ef7c1fe095ae7436eb684546e3d15fc2aa93fad87",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Course_Duration",
+          "type": "float",
+          "notNull": true,
+          "defaultValue": "4"
+        },
+        "table": "university_courses"
+      }
+    }
+  ]
+}

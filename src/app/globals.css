@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+	--text: #e3d8f6;
+	--background: #0a0413;
+	--primary: #a986e3;
+	--secondary: #851f3c;
+	--accent: #d66751;
+	--text-50: #f1eafb;
+	--text-100: #e2d5f6;
+	--text-200: #c5abed;
+	--text-300: #a981e4;
+	--text-400: #8c57db;
+	--text-500: #6f2dd2;
+	--text-600: #5924a8;
+	--text-700: #431b7e;
+	--text-800: #2c1254;
+	--text-900: #16092a;
+	--text-950: #0b0415;
+	--background-50: #f1eafb;
+	--background-100: #e3d4f7;
+	--background-200: #c6a9ef;
+	--background-300: #aa7ee7;
+	--background-400: #8d54de;
+	--background-500: #7129d6;
+	--background-600: #5a21ab;
+	--background-700: #441881;
+	--background-800: #2d1056;
+	--background-900: #17082b;
+	--background-950: #0b0415;
+	--primary-50: #f0eafa;
+	--primary-100: #e2d6f5;
+	--primary-200: #c5acec;
+	--primary-300: #a783e2;
+	--primary-400: #8a5ad8;
+	--primary-500: #6d30cf;
+	--primary-600: #5727a5;
+	--primary-700: #411d7c;
+	--primary-800: #2c1353;
+	--primary-900: #160a29;
+	--primary-950: #0b0515;
+	--secondary-50: #faeaef;
+	--secondary-100: #f5d6df;
+	--secondary-200: #ecacbe;
+	--secondary-300: #e2839e;
+	--secondary-400: #d85a7e;
+	--secondary-500: #cf305d;
+	--secondary-600: #a5274b;
+	--secondary-700: #7c1d38;
+	--secondary-800: #531325;
+	--secondary-900: #290a13;
+	--secondary-950: #150509;
+	--accent-50: #faedea;
+	--accent-100: #f5dbd6;
+	--accent-200: #ecb7ac;
+	--accent-300: #e29383;
+	--accent-400: #d86f5a;
+	--accent-500: #cf4b30;
+	--accent-600: #a53c27;
+	--accent-700: #7c2d1d;
+	--accent-800: #531e13;
+	--accent-900: #290f0a;
+	--accent-950: #150705;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 227, 216, 246;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
+}
+
+body {
+	font-family: system-ui, sans-serif;
+	scroll-behavior: smooth;
+	background-color: var(--background);
+	color: var(--text);
+	color: rgb(var(--foreground-rgb));
+	background: linear-gradient(to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+}

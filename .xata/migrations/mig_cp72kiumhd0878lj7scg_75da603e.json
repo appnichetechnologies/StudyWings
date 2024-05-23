@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72kiumhd0878lj7scg",
+  "parentID": "mig_cp72kb6mhd0878lj7sbg",
+  "checksum": "1:75da603e97718eb7d6d5638f561064bcddb04d6356405619019026b2eefa011f",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "University_Location",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Mumbai, Maharashtra"
+        },
+        "table": "universities"
+      }
+    }
+  ]
+}

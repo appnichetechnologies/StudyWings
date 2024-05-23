@@ -1,0 +1,7 @@
+{
+  "databaseURL": "https://appnichetechnologies-s-workspace-bbijnp.us-east-1.xata.sh/db/StudyWings",
+  "codegen": {
+    "output": "src/xata.js",
+    "moduleType": "cjs"
+  }
+}

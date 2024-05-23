@@ -1,0 +1,19 @@
+{
+  "id": "mig_cp72n3emhd0878lj7si0",
+  "parentID": "mig_cp72mq2k2inei44ectl0",
+  "checksum": "1:b3c29882fd33489cf6777f37719fa90c5582357e42f3154cbbf0dcb72b680482",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "CountryID",
+          "type": "link",
+          "link": {
+            "table": "countries"
+          }
+        },
+        "table": "university_courses"
+      }
+    }
+  ]
+}

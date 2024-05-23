@@ -1,0 +1,17 @@
+{
+  "id": "mig_cp72kuemhd0878lj7sdg",
+  "parentID": "mig_cp72koik2inei44ectk0",
+  "checksum": "1:4715f76d6b5c20a84cf3925a981a4c97300cc52ae93c7bb461013f9eb0189c4c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "University_Ranking",
+          "type": "int",
+          "unique": true
+        },
+        "table": "universities"
+      }
+    }
+  ]
+}

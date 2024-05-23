@@ -1,0 +1,19 @@
+{
+  "id": "mig_cp72q7qk2inei44ecttg",
+  "parentID": "mig_cp72ptik2inei44ectsg",
+  "checksum": "1:88a7d8f22d08fa608f8d5b250a451aa01764f5135cc6e65d30b5a20dbbb114eb",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "CourseID",
+          "type": "link",
+          "link": {
+            "table": "university_courses"
+          }
+        },
+        "table": "applications"
+      }
+    }
+  ]
+}

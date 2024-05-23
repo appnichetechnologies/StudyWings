@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72st6mhd0878lj7spg",
+  "parentID": "mig_cp72smqk2inei44ecu7g",
+  "checksum": "1:51d40f4670b53be680f1e0b618f3579163865f0b18cc048a7a25d655b0454041",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Student_DocumentName",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Adhaar Card"
+        },
+        "table": "student_documents"
+      }
+    }
+  ]
+}

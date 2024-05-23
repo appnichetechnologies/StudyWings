@@ -1,0 +1,12 @@
+{
+  "id": "mig_cp72shqk2inei44ecu6g",
+  "parentID": "mig_cp72s7ik2inei44ecu50",
+  "checksum": "1:540b91ed337e014eb4618afc8744c49f359b4d48e3946c74f86110e5c735e4c7",
+  "operations": [
+    {
+      "addTable": {
+        "table": "student_documents"
+      }
+    }
+  ]
+}

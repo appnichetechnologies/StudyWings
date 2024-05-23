@@ -1,0 +1,19 @@
+{
+  "id": "mig_cp72qhqk2inei44ectug",
+  "parentID": "mig_cp72q7qk2inei44ecttg",
+  "checksum": "1:e095d1760679635bcebe7beb7d289619dad5f5a9fc4dd2da465382b5603c641e",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "StudentID",
+          "type": "link",
+          "link": {
+            "table": "students"
+          }
+        },
+        "table": "applications"
+      }
+    }
+  ]
+}

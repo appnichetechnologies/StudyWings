@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp72rmmmhd0878lj7sog",
+  "parentID": "mig_cp72riak2inei44ecu30",
+  "checksum": "1:f0e590ae6d2831382b2b7dc73cffd0faa93b91c929eec17d35fc22d06d2c446b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Student_DOB",
+          "type": "datetime",
+          "notNull": true,
+          "defaultValue": "now"
+        },
+        "table": "student_registration"
+      }
+    }
+  ]
+}
