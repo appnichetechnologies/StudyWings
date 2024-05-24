@@ -7,29 +7,56 @@ export async function POST(request)
     {
         const data = await request.json()
         const result = await student_application_fetch(data);
-        return NextResponse
-            .json(
-                {
-                    'returncode': result.returncode,
-                    'message': result.message,
-                    'output': result.output
-                },
-                {
-                    status: result.returncode,
-                });
-
+        return new NextResponse(
+            JSON.stringify({
+                'returncode': result.returncode,
+                'message': result.message,
+                'output': result.output
+            }),
+            {
+                status: result.returncode,
+                headers: {
+                    'Access-Control-Allow-Origin': 'https://studywings.netlify.app',
+                    'Access-Control-Allow-Methods': 'GET,HEAD,POST,OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                    'Access-Control-Allow-Credentials': 'true'
+                }
+            }
+        );
     } 
     catch (error) 
     {
-        return NextResponse.json(
-            {
+        return new NextResponse(
+            JSON.stringify({
                 'returncode': 500,
                 'message': error.message,
-                'output':[]
-            },
+                'output': []
+            }),
             {
-                status: 500
+                status: 500,
+                headers: {
+                    'Access-Control-Allow-Origin': 'https://studywings.netlify.app',
+                    'Access-Control-Allow-Methods': 'GET,HEAD,POST,OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                    'Access-Control-Allow-Credentials': 'true'
+                }
             }
         );
     }
+}
+
+export async function OPTIONS() 
+{
+    return new NextResponse(
+        null,
+        {
+            status: 204,
+            headers: {
+                'Access-Control-Allow-Origin': 'https://studywings.netlify.app',
+                'Access-Control-Allow-Methods': 'GET,HEAD,POST,OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Credentials': 'true'
+            }
+        }
+    );
 }
