@@ -14,8 +14,8 @@ export default function Profile()
             </section>
 
             <section  id="profile_page">
-                <ProfilePanel/>
-                <StudentInfo/>
+                <ProfilePanel key='profile'/>
+                <StudentInfo key='student'/>
             </section>
 
             <section  id="footer">

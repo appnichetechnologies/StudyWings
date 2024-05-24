@@ -12,7 +12,7 @@ const StudentInfo = () => {
 
 		const res = await axios.post("/api/application/student", {
 			username: student_id
-		})
+		});
 		setData(res.data.output);
 	}
 
@@ -22,71 +22,87 @@ const StudentInfo = () => {
 
 
 	return (
-		<div className="w-[80dvw] flex justify-center">
-			<div className="flex flex-col gap-4 justify-center items-center text-xl">
-				<table className="w-full text-sm text-left rtl:text-right bg-[--background] shadow-[--primary] shadow-md">
-					<thead className="text-l text-white uppercase bg-[--primary]">
-						<tr>
-							<th scope="col" className="px-6 py-3">
-								University Name
-							</th>
-							<th scope="col" className="px-6 py-3">
-								Location
-							</th>
-							<th scope="col" className="px-6 py-3">
-								Course Name
-							</th>
-							<th scope="col" className="px-6 py-3">
-								Duration
-							</th>
-							<th scope="col" className="px-6 py-3">
-								Admission Process
-							</th>
-							<th scope="col" className="px-6 py-3">
-								Status
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						{
+		<div className="flex items-center justify-center flex-col">
+			<h1 className="text-4xl py-10">Applications</h1>
 
-							data.map((item) =>
-							(
+			<table className="w-[90dvw] hidden md:block">
+				<thead className="bg-[--primary] text-white border border-[--primary]">
+					<tr>
+						<th className="p-3 text-left tracking-wide text-sm font-semibold">University Name</th>
+						<th className="p-3 text-left tracking-wide text-sm font-semibold">Location</th>
+						<th className="p-3 text-left tracking-wide text-sm font-semibold">Course Name</th>
+						<th className="p-3 text-left tracking-wide text-sm font-semibold">Duration</th>
+						<th className="p-3 text-left tracking-wide text-sm font-semibold">Admission Process</th>
+						<th className="p-3 text-left tracking-wide text-sm font-semibold">Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					{
+						data.map((item) =>
+						(
+							<tr key={item.id} className="border border-[--primary]">
+								<td className="p-3 text-left text-sm">{item.CourseID.UniversityID.University_Name}</td>
+								<td className="p-3 text-left text-sm">{item.CourseID.UniversityID.University_Location}</td>
+								<td className="p-3 text-left text-sm">{item.CourseID.Course_Name}</td>
+								<td className="p-3 text-left text-sm">{item.CourseID.Course_Duration} Years</td>
+								<td className="p-3 text-left text-sm">{item.CourseID.UniversityID.University_AdmissionProcess}</td>
+								<td className="p-3 text-left text-sm">
+									{item.Application_Status === "Success" ?
+										(
+											<span className="p-1.5 text-xs font-bold uppercase tracking-wider bg-green-300 text-green-800  rounded-lg bg-opacity-80">{item.Application_Status}</span>
+										)
+										:
+										(
+											<span className="p-1.5 text-xs font-bold uppercase tracking-wider bg-red-300 text-red-800 rounded-lg bg-opacity-80">{item.Application_Status}</span>
+										)}
+								</td>
 
-								<tr class="bg-[--background] border-b text-white border-gray-700">
-									<th scope="row" class="px-6 py-4">
-										{item.University_Name}
-									</th>
-									<td class="px-6 py-4">
-										{item.University_Location}
-									</td>
-									<td class="px-6 py-4">
-										{item.Course_Name}
-									</td>
-									<td class="px-6 py-4">
-										{item.Course_Duration} Years
-									</td>
-									<td class="px-6 py-4">
-										{item.University_AdmissionProcess}
-									</td>
-									<td class="px-6 py-4 text-right">
-										{item.Application_Status === "Accepted" ?
-											(
-												<span class="font-medium text-green-600 dark:text-green-500 hover:underline">{item.Application_Status}</span>
-											)
-											:
-											(
-												<span class="font-medium text-red-600 dark:text-red-500 hover:underline">{item.Application_Status}</span>
-											)}
-									</td>
+							</tr>
+						))
+					}
+				</tbody>
+			</table>
 
-								</tr>
-							))
-						}
-					</tbody>
-
-				</table>
-
+			<div key='table' className="w-[90dvw] flex md:hidden">
+				<div key='innertable'>
+					{
+						data.map((item) =>
+						(
+							<>
+								<div key={item.id} className="bg-[--background] shadow-lg shadow-[--primary] flex flex-col gap-2 items-center text-left p-8">
+									<div key={item.CourseID.id} className="flex gap-4">
+										<div className="font-bold underline flex flex-wrap">
+											{item.CourseID.Course_Name}
+										</div>
+										<div>
+											{item.Application_Status === "Success" ?
+												(
+													<span className="p-1.5 text-xs font-bold uppercase tracking-wider bg-green-300 text-green-800 rounded-lg bg-opacity-80">{item.Application_Status}</span>
+												)
+												:
+												(
+													<span className="p-1.5 text-xs font-bold uppercase tracking-wider bg-red-300 text-red-800  rounded-lg bg-opacity-80">{item.Application_Status}</span>
+												)}
+										</div>
+									</div>
+									<div key={item.CourseID.UniversityID.id}>
+										<div className="text-base flex flex-wrap">
+											{item.CourseID.UniversityID.University_Name}, {item.CourseID.UniversityID.University_Location}
+										</div>
+									</div>
+									<div>
+										<div className="w-full text-sm text-left text-gray-400 flex flex-wrap">
+											{item.CourseID.UniversityID.University_AdmissionProcess}
+										</div>
+									</div>
+									
+								</div>
+								
+							</>
+							
+						))
+					}
+				</div>
 			</div>
 		</div>
 	);

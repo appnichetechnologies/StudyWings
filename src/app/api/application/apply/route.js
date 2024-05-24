@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
-import { student_application } from "./logic";
+import {student_apply}  from "./logic.js";
 
 export async function POST(request) 
 {
     try 
     {
         const data = await request.json()
-        const result = await student_application(data);
+        const result = await student_apply(data);
         return NextResponse
             .json(
                 {

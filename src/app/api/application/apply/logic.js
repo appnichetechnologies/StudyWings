@@ -3,7 +3,7 @@ import { getXataClient } from "../../../../xata";
 // Database Connection Pool
 const connection = getXataClient();
 
-export async function student_application(data) 
+export async function student_apply(data) 
 {
     try 
     {
@@ -31,7 +31,7 @@ export async function student_application(data)
             return {
                 'returncode': 200,
                 'message': "Thank you For Contacting us, We'll contact you as soon as possible",
-                'output': result
+                'output': student
             }
         }
 

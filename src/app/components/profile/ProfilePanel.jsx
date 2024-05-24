@@ -47,14 +47,16 @@ const ProfilePanel = () => {
 	return (
 		<div className="w-full h-auto my[3rem] flex justify-center items-center bg-[--background]">
 			<div className="w-[90%] h-auto mx-auto my-[3rem] bg-[--background] flex gap-[3rem] flex-col justify-center items-center">
-				<div className="w-full h-[30%] bg-[] text-[--text] flex justify-center items-center">
+				<div key='a1' className="w-full h-[30%] bg-[] text-[--text] flex flex-wrap justify-center items-center">
 					<div className="w-[300px] h-[300px] flex justify-center items-center">
-						<div id="profile" className="flex justify-center items-center ">
+						<div key='profile' id="profile" className="flex justify-center items-center ">
 					
 						{
 							profile.map((items) =>
 							(
-								<img className="w-[400px] rounded-full border-black border" src={items.url} alt="this is image" />
+								<div key={items.id}>
+									<img className="w-[200px] rounded-full border-black border" src={items.url} alt="this is image" />
+								</div>
 							))
 						}
 						</div>
@@ -70,22 +72,25 @@ const ProfilePanel = () => {
 					</div>
 				</div>
 
-				<div className="w-full shadow-[--primary] shadow-md border border-[--primary] rounded-3xl">
+				<h1 className="text-4xl">Documents</h1>
+
+				<div key='a2' className="w-full shadow-[--primary] shadow-md border border-[--primary] rounded-3xl">
 					<div id="thisitem" className="w-auto h-full px-16 flex m-4 rounded-xl">
-						<div className="flex flex-col justify-center items-center gap-8 text-3xl">
-							<h1>Documents</h1>
+						
+						<div className="flex flex-wrap justify-center items-center gap-8 text-3xl">
 							{
 								docus.map((items) =>
 								(
-									<div className="flex flex-col justify-center items-center">
+									<div key={items.id} className="flex flex-col justify-center items-center">
 										<div className="first text-center text-2xl">{items.Student_DocumentName}</div>
 										{
 											items.Student_Document.map((item) =>
 											(
-												<img className="w-[200px]" src={item.url} alt="Document" />									
+												<div key={item.id}>
+													<img className="w-[90dvw]  md:w-[20dvw]" src={item.url} alt="Document" />									
+												</div>
 											))
 										}
-
 									</div>
 								))
 							}

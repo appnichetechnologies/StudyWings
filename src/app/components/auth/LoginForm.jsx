@@ -17,7 +17,7 @@ const handelSubmit = (event) => {
 
 		.then((response) => {
 
-			let studentId = response.data.output.Student_Id;
+			let studentId = response.data.output[0].id;
 			let logincode = response.data.returncode;
 			console.log(response.data)
 			sessionStorage.setItem("Id", studentId);

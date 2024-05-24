@@ -23,6 +23,7 @@ export async function student_application_fetch(data)
             let student = await connection.db.applications.select([
                 "StudentID.*",
                 "CourseID.*",
+                "CourseID.UniversityID.*",
                 "Application_Status"
               ])
               .getAll();
