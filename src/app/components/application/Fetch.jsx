@@ -124,6 +124,9 @@ const ApplicationFetch = () => {
                                         </div>
                                     </td>
                                     <td className="p-6 text-left text-sm">
+											<div className="px-6 py-4 text-xl text-gray-900 font-medium">
+												<input id="madar" type="radio" name="madar" value={item.id} />
+											</div>
                                     </td>
                                 </tr>
                             ))
