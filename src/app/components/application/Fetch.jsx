@@ -13,7 +13,7 @@ const ApplicationFetch = () => {
 	useEffect(() => {
 
 		const fetchdata = async () => {
-			const res = await axios("http://localhost:3000/api/root/fetch/course")
+			const res = await axios("/api/root/fetch/course")
 			setData(res.data.output);
 		}
 
@@ -29,7 +29,7 @@ const ApplicationFetch = () => {
 		const app_status = "Pending";
 		const alert_msg = document.getElementById('notification');
 
-		axios.post("http://localhost:3000/api/application/apply", {
+		axios.post("/api/application/apply", {
 
 			course_id: course_id,
 			student_id: student_id,
@@ -178,7 +178,7 @@ const ApplicationFetch = () => {
 					</div>
 				</div>
 
-				<div className="absolute top-[30dvh] right-[80px]">
+				<div className="absolute block md:hidden top-[30dvh] right-[80px]">
 					<button className="px-4 py-2 bg-red-800 text-white rounded-md" type="submit">Next</button>
 				</div>
 			</form>
