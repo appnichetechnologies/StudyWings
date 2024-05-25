@@ -57,14 +57,25 @@ const StudentInfo = () => {
 								<td className="p-3 text-left text-sm">{item.CourseID.Course_Duration} Years</td>
 								<td className="p-3 text-left text-sm">{item.CourseID.UniversityID.University_AdmissionProcess}</td>
 								<td className="p-3 text-left text-sm">
-									{item.Application_Status === "Success" ?
-										(
-											<span className="p-1.5 text-xs font-bold uppercase tracking-wider bg-green-300 text-green-800  rounded-lg bg-opacity-80">{item.Application_Status}</span>
+									{
+										 item.Application_Status === "Success" ? (
+											<span className="p-1.5 text-xs font-bold uppercase tracking-wider bg-green-300 text-green-800 rounded-lg bg-opacity-80">
+												{item.Application_Status}
+											</span>
+										) : item.Application_Status === "Pending" ? (
+											<span className="p-1.5 text-xs font-bold uppercase tracking-wider bg-yellow-300 text-yellow-800 rounded-lg bg-opacity-80">
+												{item.Application_Status}
+											</span>
+										) : item.Application_Status === "Failed" ? (
+											<span className="p-1.5 text-xs font-bold uppercase tracking-wider bg-red-300 text-red-800 rounded-lg bg-opacity-80">
+												{item.Application_Status}
+											</span>
+										) : (
+											<span className="p-1.5 text-xs font-bold uppercase tracking-wider bg-gray-300 text-gray-800 rounded-lg bg-opacity-80">
+												{item.Application_Status}
+											</span>
 										)
-										:
-										(
-											<span className="p-1.5 text-xs font-bold uppercase tracking-wider bg-red-300 text-red-800 rounded-lg bg-opacity-80">{item.Application_Status}</span>
-										)}
+									}
 								</td>
 
 							</tr>
