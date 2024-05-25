@@ -164,38 +164,35 @@ const ApplicationFetch = () => {
 						{
 							data.map((item) =>
 							(
-								<div className="flex flex-col gap-4">
-									<div key={item.id} className="rounded-2xl mt-10 bg-white  flex flex-wrap text-left p-8">
-										<div>
-											<div className="font-large text-green-900 whitespace-nowrap text-xl text-right">
-													#{item.UniversityID.University_Ranking}
+								<div key={item.id} className="rounded-2xl mt-10 bg-white  flex flex-wrap text-left p-8">
+									<div>
+										<div className="font-large text-green-900 whitespace-nowrap text-xl text-right">
+												#{item.UniversityID.University_Ranking}
+										</div>
+											
+										<div className="flex gap-4 items-center justify-center">
+											<div className="px-6 py-4 text-xl text-gray-900 font-medium">
+												{mcount = mcount + 1}
 											</div>
-												
-											<div className="flex gap-4 items-center justify-center">
-												<div className="px-6 py-4 text-xl text-gray-900 font-medium">
-													{mcount = mcount + 1}
-												</div>
-												<div className="px-6 py-4  text-gray-900 font-medium">
-													<input id="madar" type="radio" name="madar" value={item.id} />
-												</div>
+											<div className="px-6 py-4  text-gray-900 font-medium">
+												<input id="madar" type="radio" name="madar" value={item.id} />
 											</div>
+										</div>
 
-											<div className="flex flex-wrap gap-2">
-												<h1 className="text-base text-red-600">Fees: ₹{item.Course_Fees}</h1>
-												<p className="text-base text-yellow-600">Duration: {item.Course_Duration} Years</p>
-											</div>
+										<div className="flex flex-wrap gap-2">
+											<h1 className="text-base text-red-600">Fees: ₹{item.Course_Fees}</h1>
+											<p className="text-base text-yellow-600">Duration: {item.Course_Duration} Years</p>
+										</div>
 
+										<div className="flex flex-col gap-2">
 											<div className="flex flex-col gap-2">
-												<div className="flex flex-col gap-2">
-													<h1 className="flex flex-wrap text-xl text-black font-bold">{item.Course_Name}</h1>
-													<h2 className="flex flex-wrap text-xl text-gray-700 font-bold">{item.UniversityID.University_Name}</h2>
-												</div>
-												<p className="flex flex-wrap text-gray-700 text-base">{item.Course_Description}</p>
+												<h1 className="flex flex-wrap text-xl text-black font-bold">{item.Course_Name}</h1>
+												<h2 className="flex flex-wrap text-xl text-gray-700 font-bold">{item.UniversityID.University_Name}</h2>
 											</div>
+											<p className="flex flex-wrap text-gray-700 text-base">{item.Course_Description}</p>
 										</div>
 									</div>
 								</div>
-								
 							))
 						}
 					</div>
