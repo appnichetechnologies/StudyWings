@@ -18,8 +18,12 @@ const ProfilePanel = () => {
 			setProfile(data.data.output.Student_ProfilePic);
 
 		}
-		catch (error) {
-			window.location.href = "/profile/add";
+		catch (error) 
+		{
+			setTimeout(function () 
+			{ 
+				alert("No Profile Found");
+		 	}, 5000);
 		}
 	}
 
@@ -31,9 +35,12 @@ const ProfilePanel = () => {
 			});
 			setDocus(docs.data.output);
 		}
-		catch (error) {
-			alert("No Documents Found");
-			window.location.href="/profile/documents"
+		catch (error) 
+		{
+            setTimeout(function () 
+			{ 
+				alert("No Documents Found");
+		 	}, 5000);
 		}
 	}
 

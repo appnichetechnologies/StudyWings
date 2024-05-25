@@ -7,13 +7,23 @@ const StudentInfo = () => {
 	const [data, setData] = useState([]);
 
 	const fetchinfo = async () => {
+		try 
+		{
+			const student_id = (sessionStorage.getItem("name"));
 
-		const student_id = (sessionStorage.getItem("name"));
-
-		const res = await axios.post("/api/application/student", {
-			username: student_id
-		});
-		setData(res.data.output);
+			const res = await axios.post("/api/application/student", {
+				username: student_id
+			});
+			setData(res.data.output);
+		} 
+		catch(error) 
+		{
+			setTimeout(function () 
+			{ 
+				alert("No Applications Found");
+		 	}, 5000);
+		}
+		
 	}
 
 	useEffect(() => {

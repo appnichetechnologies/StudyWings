@@ -4,7 +4,7 @@ const Footer = () =>
         <div className="w-[80dw] p-8">
             <footer
                 className=" md:py-6 bg-[#2c1353] h-auto mt-8 px-8
-            rounded-xl flex gap-4 md:gap-0 flex-col md:flex-row md:justify-between items-center"
+            rounded-xl flex gap-4 md:gap-0 flex-col md:flex-row md:justify-between justify-center items-center p-4"
             >
                 <div className="text-center">
                     <span className="text-white">Copyright © Appniche Technologies 2024</span>
@@ -18,7 +18,7 @@ const Footer = () =>
                     <span className="px-2 hidden md:flex gap-4">
                         | 
                     </span>
-                    <a href="#" className="text-white">Terms of Use</a>
+                    <a href="#" className="hidden md:flex text-white">Terms of Use</a>
 
                     
                 </div>
