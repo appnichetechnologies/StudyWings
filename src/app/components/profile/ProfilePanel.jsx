@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { IoAddCircle } from "react-icons/io5";
+import { FaUserEdit } from "react-icons/fa";
 
 const ProfilePanel = () => {
 
@@ -54,36 +56,45 @@ const ProfilePanel = () => {
 	return (
 		<div className="w-full h-auto my[3rem] flex justify-center items-center bg-[--background]">
 			<div className="w-[90%] h-auto mx-auto my-[3rem] bg-[--background] flex gap-[3rem] flex-col justify-center items-center">
-				<div key='a1' className="w-full h-[30%] bg-[] text-[--text] flex flex-wrap justify-center items-center">
-					<div className="w-[300px] h-[300px] flex justify-center items-center">
-						<div key='profile' id="profile" className="flex justify-center items-center ">
-					
-						{
-							profile.map((items) =>
-							(
-								<div key={items.id}>
-									<img className="w-[200px] rounded-full border-black border" src={items.url} alt="this is image" />
-								</div>
-							))
-						}
-						</div>
-
+				<div key='a1' className="w-full h-[30%] bg-[] text-[--text] flex flex-col justify-center items-center">
+					<div className="flex flex-wrap gap-[8dvh] h-auto justify-center items-center">
+						<a href="/profile/add">
+							<FaUserEdit className="text-4xl text-[--primary]"/>
+						</a>
 					</div>
-
-					<div className="w-[50%] h-full p-8 ">
-						<div id="thisitem" className="w-auto h-full px-8 flex justify-center bg-[--bg] p-8 rounded-xl">
-							<div className="flex flex-col justify-center items-center gap-8 text-3xl">
-								<div className="first text-center">{res.Student_FirstName} {res.Student_LastName}</div>
+					<div className="flex flex-wrap justify-center items-center">
+						<div className="w-[300px] h-[300px] flex justify-center items-center">
+							<div key='profile' id="profile" className="flex justify-center items-center ">
+						
+							{
+								profile.map((items) =>
+								(
+									<div key={items.id}>
+										<img className="w-[200px] rounded-full border-black border" src={items.url} alt="this is image" />
+									</div>
+								))
+							}
+							</div>
+						</div>
+						<div className="w-[50%] h-full p-8 ">
+							<div id="thisitem" className="w-auto h-full px-8 flex justify-center bg-[--bg] p-8 rounded-xl">
+								<div className="flex flex-col justify-center items-center gap-8 text-3xl">
+									<div className="first text-center">{res.Student_FirstName} {res.Student_LastName}</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<h1 className="text-4xl">Documents</h1>
 
+				<div className="flex flex-wrap gap-[5dvh] justify-center items-center">
+					<h1 className="text-4xl">Documents</h1>
+					<a href="/profile/documents">
+						<IoAddCircle className="text-5xl text-[--primary]"/>
+					</a>
+				</div>
 				<div key='a2' className="w-full shadow-[--primary] shadow-md border border-[--primary] rounded-3xl">
 					<div id="thisitem" className="w-auto h-full px-16 flex m-4 rounded-xl">
-						
 						<div className="flex flex-wrap justify-center items-center gap-8 text-3xl">
 							{
 								docus.map((items) =>

@@ -1,6 +1,7 @@
 'use client';
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { IoAddCircle } from "react-icons/io5";
 
 const StudentInfo = () => {
 
@@ -33,8 +34,12 @@ const StudentInfo = () => {
 
 	return (
 		<div className="flex items-center justify-center flex-col">
-			<h1 className="text-4xl py-10">Applications</h1>
-
+			<div className="flex flex-wrap gap-[5dvh] justify-center items-center pb-10">
+					<h1 className="text-4xl">Applications</h1>
+					<a href="/applications">
+						<IoAddCircle className="text-5xl text-[--primary]"/>
+					</a>
+				</div>
 			<table className="w-[90dvw] hidden md:block">
 				<thead className="bg-[--primary] text-white border border-[--primary]">
 					<tr>

@@ -80,7 +80,7 @@ const Navbar = () =>
                         <span className="flex justify-center items-center hover:bg-[#8a5ad8] px-4 w-full h-[40px] rounded-lg"><a href="/profile">Profile</a></span>
                         <span className="flex justify-center items-center hover:bg-[#8a5ad8] px-4 w-full h-[40px] rounded-lg"><a href="/application">Application</a></span>
                         <span className="flex justify-center items-center hover:bg-[#8a5ad8] px-4 w-full h-[40px] rounded-lg">
-                            {code === 0 ? logOut() : logIn()}
+                            {code === 1 ? logOut() : logIn()}
                         </span>
                     </div>
                 </div>
