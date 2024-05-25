@@ -95,7 +95,7 @@ const StudentInfo = () => {
 						data.map((item) =>
 						(
 							<>
-								<div key={item.id} className="bg-[--background] shadow-lg shadow-[--primary] flex flex-col gap-2 items-center text-left p-8">
+								<div key={item.id} className="mt-10 bg-[--background] shadow-lg shadow-[--primary] flex flex-col gap-2 items-center text-left p-8">
 									<div key={item.CourseID.id} className="flex gap-4">
 										<div className="font-bold underline flex flex-wrap">
 											{item.CourseID.Course_Name}
